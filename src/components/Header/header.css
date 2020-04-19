@@ -1,0 +1,26 @@
+.header, nav {
+  background: #222 !important;
+}
+
+nav {
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.header img {
+  width: 100px;
+  height: 1rem;
+}
+
+.navbar-burger {
+  color: #fff;
+}
+
+.navbar-burger span {
+  height: 2px;
+}
+
+#main-navbar {
+  padding: 0;
+}

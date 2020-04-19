@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './TeslaStats.css';
+
 const TeslaStats = ({ carstats }) => {
   const listItems = carstats.map((stat, index) => (
     <li key={index.toString()}>

@@ -1,0 +1,64 @@
+.tesla-stats {
+  margin: -4rem 0 2rem;
+}
+
+.tesla-stats ul {
+  text-align: center;
+}
+
+.tesla-stats ul li {
+  display: inline-block;
+  width: 8.2rem;
+  position: relative;
+}
+
+.tesla-stats ul li p {
+  font-size: 2.25rem;
+  font-weight: normal;
+  font-family: 'RobotoNormal';
+  display: block;
+  padding: 0 1.1rem 0 0;
+  position: relative;
+  color: #008dff;
+  text-align: right;
+}
+
+.tesla-stats ul li p:after {
+  content: 'MI';
+  font-size: 0.9rem;
+  font-weight: normal;
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+.tesla-stats-icon {
+  height: 1.25rem;
+  background-size: auto 0.85rem;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.tesla-stats-icon--60 {
+  background-image: url(../../assets/models/60.svg);
+}
+
+.tesla-stats-icon--60d {
+  background-image: url(../../assets/models/60d.svg);
+}
+
+.tesla-stats-icon--75 {
+  background-image: url(../../assets/models/75.svg);
+}
+
+.tesla-stats-icon--75d {
+  background-image: url(../../assets/models/75d.svg);
+}
+
+.tesla-stats-icon--90d {
+  background-image: url(../../assets/models/90d.svg);
+}
+
+.tesla-stats-icon--p100d {
+  background-image: url(../../assets/models/p100d.svg);
+}

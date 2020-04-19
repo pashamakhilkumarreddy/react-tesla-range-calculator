@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getModelData } from '../../services/';
 import TeslaNotice from '../../components/TeslaNotice';
 import TeslaCar from '../../components/TeslaCar';
 import TeslaStats from '../../components/TeslaStats';
@@ -18,6 +19,30 @@ export default class TeslaBattery extends Component {
       }
     }
   }
+
+  calculateStats = (models, value) => {
+    const dataModels = getModelData();
+    return models.map(model => {
+      const { speed, temperature, climate, wheels } = value;
+      const miles = dataModels[model][wheels][climate ? 'on' : 'off'].speed[speed][temperature];
+      return {
+        model, 
+        miles
+      };
+    });
+  }
+
+  statsUpdate = () => {
+    const carModels = ['60', '60D', '75', '75D', '90D', 'P100D'];
+    this.setState({
+      carstats: this.calculateStats(carModels, this.state.config)
+    })
+  }
+
+  componentDidMount() {
+    this.statsUpdate();
+  }
+
   render() {
     const { config, carstats } = this.state;
     return (
